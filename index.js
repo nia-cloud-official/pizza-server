@@ -25,7 +25,7 @@ const port = process.env.PORT || 8700;
 
 const connect = () => {
     mongoose.set('strictQuery', true);
-    mongoose.connect(process.env.MONGO_URL).then(() => {
+    mongoose.connect("mongodb+srv://<username>:<password>@cluster0.nm8ehyv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(() => {
         console.log('MongoDB connected');
     }).catch((err) => {
         console.log(err);
